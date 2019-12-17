@@ -15,6 +15,8 @@ namespace io {
 
 	std::vector<std::int64_t> readLineOfDigits(const std::string& fileName);
 
+	std::vector<char> readLineOfChars(const std::string& fileName);
+
 	std::vector<std::vector<char>> readLinesOfChars(const std::string& fileName);
 
 	std::vector<std::string> readLinesOfString(const std::string& fileName, bool fullPath = false);

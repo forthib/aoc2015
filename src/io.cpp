@@ -5,7 +5,7 @@
 
 namespace io {
 	namespace {
-		std::string getFilePath(const std::string& fileName) { return R"(C:\TFO\REPOS\aoc2019\data\)" + fileName; }
+		std::string getFilePath(const std::string& fileName) { return R"(C:\TFO\REPOS\aoc2015\data\)" + fileName; }
 
 		bool contains(const std::string& s, char c) { return std::find(s.begin(), s.end(), c) != s.end(); }
 	}
@@ -86,6 +86,11 @@ namespace io {
 		for (const char c : line)
 			values.push_back(static_cast<std::int64_t>(c - '0'));
 		return values;
+	}
+
+	std::vector<char> readLineOfChars(const std::string& fileName)
+	{
+		return readLinesOfChars(fileName).front();
 	}
 
 	std::vector<std::vector<char>> readLinesOfChars(const std::string& fileName)
